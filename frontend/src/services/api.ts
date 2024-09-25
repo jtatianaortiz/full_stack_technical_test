@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://api.escuelajs.co/api/v1/products';
+const API_URL = 'https://api.escuelajs.co/api/v1/products?offset=0&limit=10';
 
 export const fetchProducts = async () => {
   try {

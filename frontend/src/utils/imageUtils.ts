@@ -1,4 +1,4 @@
-import productImage from '../assets/images/product_image.jpg'
+import productImage from '../assets/images/product-image.jpg'
 
 const defaultImage =  productImage;
 

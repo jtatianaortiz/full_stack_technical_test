@@ -11,6 +11,7 @@ interface WishlistContextProps {
   addWishlist: (product: Product) => void;
   removeWishlist: (productId: number) => void;
   isWishlist: (productId: number) => boolean;
+  sortWishlistByName: (order: 'asc' | 'desc') => void;
 }
 
 const WishlistContext = createContext<WishlistContextProps | undefined>(undefined);
@@ -37,8 +38,19 @@ export const WishlistProvider = ({ children }: { children: ReactNode }) => {
     return wishlist.some((product) => product.id === productId);
   };
 
+  const sortWishlistByName = (order: 'asc' | 'desc') => {
+    const sortedWishlist = [...wishlist].sort((a, b) => {
+      if (order === 'asc') {
+        return a.title.localeCompare(b.title);
+      } else {
+        return b.title.localeCompare(a.title);
+      }
+    });
+    setWishlist(sortedWishlist);
+  };
+
   return (
-    <WishlistContext.Provider value={{ wishlist, addWishlist, removeWishlist, isWishlist }}>
+    <WishlistContext.Provider value={{ wishlist, addWishlist, removeWishlist, isWishlist, sortWishlistByName }}>
       {children}
     </WishlistContext.Provider>
   );

@@ -1,6 +1,6 @@
 # Double V Partners
 
-## Desarrollador Full Stack Semi Senior
+## Frontend
 
 ### ¡Bienvenidos / as!
 
@@ -15,12 +15,16 @@
   - [Clonar el repositorio](#clonar-el-repositorio)
   - [Ejecutar con npm](#ejecutar-con-npm)
   - [Scripts disponibles](#scripts-disponibles)
-- [Documentación](#documentación)
+- [API públicas](#api-públicas)
 - [Desarrollador ✒️](#desarrollador-✒️)
 
 ## Introducción
 
 Esta prueba técnica es una tienda en línea desarrollada con React, Ionic y TypeScript, que permite a los usuarios explorar productos, agregar productos a su lista de wishlist. La aplicación se conecta con una API RESTFUL de Platzi - [Fake Store API](https://fakeapi.platzi.com/), con el fin de obtener la información acerca de los productos.
+
+![Products page](./frontend/src/assets/images/product-list.jpeg)
+
+![Wishlist page](./frontend/src/assets/images/product-wishlist.jpeg)
 
 ## Instrucciones de la Prueba Técnica
 
@@ -124,6 +128,16 @@ $ npm run dev
 
 ```
 $ npm run build
+```
+
+## API públicas
+
+A continuación se detalla las API públicas que se utilizaron:
+
+- **Todos los productos:** Puede acceder a la lista de productos.
+
+```
+  [GET] https://api.escuelajs.co/api/v1/products
 ```
 
 ## Desarrollador ✒️
