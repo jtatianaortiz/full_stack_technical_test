@@ -1,7 +1,8 @@
 import React from 'react';
-import { IonPage, IonContent, IonSpinner } from '@ionic/react';
+import { IonPage, IonContent } from '@ionic/react';
 import useFetchProducts from '../../hooks/useFetchProducts';
 import ProductList from '../../components/Products/ProductList/ProductList';
+import Loading from '../../components/Loading/Loading';
 
 const Products: React.FC = () => {
   const { products, loading } = useFetchProducts();
@@ -10,7 +11,7 @@ const Products: React.FC = () => {
     <IonPage>
       <IonContent>
         {loading ? (
-          <IonSpinner /> 
+          <Loading /> 
         ) : (
           <ProductList products={products} />
         )}
