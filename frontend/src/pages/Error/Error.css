@@ -1,0 +1,33 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.error-image {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
