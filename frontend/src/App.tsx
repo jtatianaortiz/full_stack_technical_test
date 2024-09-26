@@ -24,7 +24,7 @@ const App: React.FC = () => (
           <IonHeader>
             <Header />
           </IonHeader>
-          <IonContent >
+          <IonContent>
             <div className="app-container">
               <WishlistProvider>
                 <AppRoutes />
